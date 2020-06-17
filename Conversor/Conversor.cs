@@ -30,6 +30,13 @@ namespace Conversor
 
         private void LoadComboBox()    /// Cargar los combo Box
         {
+            ComboBoxItem OpcionDefecto = new ComboBoxItem
+            {
+                Text = "Seleccione",
+                value = null
+
+            };
+
             ComboBoxItem PesosOpcion = new ComboBoxItem
             {
                 Text = "Pesos",
@@ -47,21 +54,50 @@ namespace Conversor
             };
 
             ////Agregamos las opciones a los Combo Box
+            cbxMonedaOrigen.Items.Add(OpcionDefecto);
             cbxMonedaOrigen.Items.Add(PesosOpcion); 
             cbxMonedaOrigen.Items.Add(DolarOpcion);
             cbxMonedaOrigen.Items.Add(EuroOpcion);
+            cbxMonedaOrigen.SelectedItem = OpcionDefecto;
 
+            cbxMonedaDestino.Items.Add(OpcionDefecto);
             cbxMonedaDestino.Items.Add(PesosOpcion);
             cbxMonedaDestino.Items.Add(DolarOpcion);
             cbxMonedaDestino.Items.Add(EuroOpcion);
+            cbxMonedaDestino.SelectedItem = OpcionDefecto;
 
         }
 
         private void btnConvertir_Click(object sender, EventArgs e)
         {
 
-            ComboBoxItem seleccionado = cbxMonedaDestino.SelectedItem as ComboBoxItem;
-            MessageBox.Show(seleccionado.Text, "Valor seleccionado");
+            try
+            {
+                ComboBoxItem seleccionadoOrigen = cbxMonedaOrigen.SelectedItem as ComboBoxItem;
+                ComboBoxItem seleccionadoDestino = cbxMonedaDestino.SelectedItem as ComboBoxItem;
+
+                if (seleccionadoOrigen.value == null)
+                {
+                    MessageBox.Show("Seleccione denominacion de origen");
+                }
+                if (seleccionadoDestino.value == null)
+                {
+                    MessageBox.Show("Seleccione denominacion destino");
+                }
+                if (string.IsNullOrEmpty(txtTotal.Text.Trim()))
+                {
+                    MessageBox.Show("Inserte cantidad a convertir");
+                }
+            }
+            catch(Exception exception)
+            {
+
+                MessageBox.Show("Debe colocar una cantidad Numerica");
+                    
+                    throw;
+            }
+          
+                
         }
     }
 }

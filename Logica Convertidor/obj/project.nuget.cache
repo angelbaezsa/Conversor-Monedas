@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wk4+T/2SchYXCFAkYmHSZAc0CLJ1WWm0Zk6FA9oNcBxViZioPrBtIjFl0V7i639UN07Aa9p3UzqhM/GQCWK6PA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Angel Baez\\Desktop\\ITLA\\cursos aprendizaje\\C#\\Conversor monedas\\Logica Convertidor\\Logica Convertidor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Angel Baez\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Angel Baez\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
