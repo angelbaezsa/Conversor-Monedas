@@ -35,6 +35,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
+            this.cbxMonedaOrigen = new System.Windows.Forms.ComboBox();
+            this.cbxMonedaDestino = new System.Windows.Forms.ComboBox();
+            this.btnConvertir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblConversor
@@ -51,12 +54,11 @@
             // 
             this.Total.AutoSize = true;
             this.Total.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(187, 224);
+            this.Total.Location = new System.Drawing.Point(79, 213);
             this.Total.Name = "Total";
             this.Total.Size = new System.Drawing.Size(74, 24);
             this.Total.TabIndex = 4;
             this.Total.Text = "Total :";
-            this.Total.Click += new System.EventHandler(this.Total_Click);
             // 
             // label1
             // 
@@ -82,7 +84,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(50, 157);
+            this.label3.Location = new System.Drawing.Point(50, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 24);
             this.label3.TabIndex = 7;
@@ -90,24 +92,59 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(166, 161);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidad.TabIndex = 8;
+            this.txtCantidad.Size = new System.Drawing.Size(121, 29);
+            this.txtCantidad.TabIndex = 3;
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(262, 228);
+            this.txtTotal.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(166, 213);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.Size = new System.Drawing.Size(121, 26);
             this.txtTotal.TabIndex = 9;
+            // 
+            // cbxMonedaOrigen
+            // 
+            this.cbxMonedaOrigen.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxMonedaOrigen.FormattingEnabled = true;
+            this.cbxMonedaOrigen.Location = new System.Drawing.Point(166, 66);
+            this.cbxMonedaOrigen.Name = "cbxMonedaOrigen";
+            this.cbxMonedaOrigen.Size = new System.Drawing.Size(121, 29);
+            this.cbxMonedaOrigen.TabIndex = 1;
+            // 
+            // cbxMonedaDestino
+            // 
+            this.cbxMonedaDestino.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxMonedaDestino.FormattingEnabled = true;
+            this.cbxMonedaDestino.Location = new System.Drawing.Point(166, 116);
+            this.cbxMonedaDestino.Name = "cbxMonedaDestino";
+            this.cbxMonedaDestino.Size = new System.Drawing.Size(121, 29);
+            this.cbxMonedaDestino.TabIndex = 2;
+            // 
+            // btnConvertir
+            // 
+            this.btnConvertir.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConvertir.Location = new System.Drawing.Point(143, 271);
+            this.btnConvertir.Name = "btnConvertir";
+            this.btnConvertir.Size = new System.Drawing.Size(144, 32);
+            this.btnConvertir.TabIndex = 5;
+            this.btnConvertir.Text = "Convertir";
+            this.btnConvertir.UseVisualStyleBackColor = true;
+            this.btnConvertir.Click += new System.EventHandler(this.btnConvertir_Click);
+           
             // 
             // frmConversor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 315);
+            this.ClientSize = new System.Drawing.Size(379, 344);
+            this.Controls.Add(this.btnConvertir);
+            this.Controls.Add(this.cbxMonedaDestino);
+            this.Controls.Add(this.cbxMonedaOrigen);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label3);
@@ -135,6 +172,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.ComboBox cbxMonedaOrigen;
+        private System.Windows.Forms.ComboBox cbxMonedaDestino;
+        private System.Windows.Forms.Button btnConvertir;
     }
 }
 
