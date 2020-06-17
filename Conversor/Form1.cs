@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace Conversor
 {
-    public partial class Form1 : Form
+    public partial class frmConversor : Form
     {
-        public Form1()
+        public frmConversor()
         {
             InitializeComponent();
+        }
+
+        private void Total_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmConversor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void v_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
